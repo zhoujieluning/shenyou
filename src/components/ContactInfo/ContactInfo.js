@@ -1,20 +1,17 @@
-import React from "react";
-import shape from "../../images/ct-shape.png";
+import React from 'react'
+import shape from '../../images/ct-shape.png'
 
 const ContactInfo = (props) => {
   return (
-    <section
-      className="contact-info-section section-padding"
-      style={{ marginTop: "200px" }}
-    >
+    <section id="ContactInfo" className="contact-info-section section-padding">
       <div className="container">
         <div className="office-info">
-          <h2 style={{ color: "white", textAlign: "center" }}>
+          <h2 style={{ color: 'white', textAlign: 'center' }}>
             留下您的联系方式
           </h2>
           <div
             className=" newsletter-widget"
-            style={{ display: "flex", justifyContent: "center" }}
+            style={{ display: 'flex', justifyContent: 'center' }}
           >
             <form onSubmit={() => {}}>
               <div className="input-1">
@@ -32,7 +29,7 @@ const ContactInfo = (props) => {
               </div>
             </form>
           </div>
-          <h2 style={{ color: "white", textAlign: "center", marginTop: 40 }}>
+          <h2 style={{ color: 'white', textAlign: 'center', marginTop: 40 }}>
             或联系我们
           </h2>
           <div className="row" style={{ marginTop: 20 }}>
@@ -82,7 +79,7 @@ const ContactInfo = (props) => {
         <img src={shape} alt="shape" />
       </div> */}
     </section>
-  );
-};
+  )
+}
 
-export default ContactInfo;
+export default ContactInfo

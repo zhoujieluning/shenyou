@@ -1,14 +1,14 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import Logo from "../../images/logo.png";
-import shape from "../../images/ft-shape.png";
+import React from 'react'
+import { Link } from 'react-router-dom'
+import Logo from '../../images/logo.png'
+import shape from '../../images/ft-shape.png'
 
 const ClickHandler = () => {
-  window.scrollTo(10, 0);
-};
+  window.scrollTo(10, 0)
+}
 const SubmitHandler = (e) => {
-  e.preventDefault();
-};
+  e.preventDefault()
+}
 
 const Footer = (props) => {
   return (
@@ -178,14 +178,7 @@ const Footer = (props) => {
         <div className="container">
           <div className="row align-items-center">
             <div className="col col-lg-6 col-md-12 col-12">
-              <ul>
-                <li>
-                  Copyright &copy; 2022 // All Right Reserved by{" "}
-                  <Link onClick={ClickHandler} to="/">
-                    Consoel.
-                  </Link>
-                </li>
-              </ul>
+              <ul>{/* <li>版权归申优所有</li> */}</ul>
             </div>
             {/* <div className="col col-lg-6 col-md-12 col-12">
               <div className="link">
@@ -217,7 +210,7 @@ const Footer = (props) => {
         </div>
       </div>
     </footer>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

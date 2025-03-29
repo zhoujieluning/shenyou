@@ -1,51 +1,88 @@
 // images
-import blogImg1 from "../images/blog/img-1.jpg";
-import blogImg2 from "../images/blog/img-2.jpg";
-import blogImg3 from "../images/blog/img-3.jpg";
+import blogImg1 from '../images/blog/img1.webp'
+import blogImg2 from '../images/blog/img2.webp'
+import blogImg3 from '../images/blog/img3.webp'
 
-import blogSingleImg1 from "../images/blog/blog-single/img-1.jpg";
-import blogSingleImg2 from "../images/blog/blog-single/img-2.jpg";
-import blogSingleImg3 from "../images/blog/blog-single/img-3.jpg";
+import blogSingleImg1 from '../images/blog/blog-single/img-1.jpg'
+import blogSingleImg2 from '../images/blog/blog-single/img-2.jpg'
+import blogSingleImg3 from '../images/blog/blog-single/img-3.jpg'
+
+import { article1 } from './article'
 
 const blogs = [
   {
-    id: "1",
-    title: "教你如何成为首富",
+    id: '1',
+    title: '第二十届数字金融联合宣传年智享2024特别活动',
     screens: blogImg1,
-    description:
-      "这是一段描述这是一段描述这是一段描述这是一段描述这是一段描述这是一段描述",
-    author: "比尔盖茨",
-    authorTitle: "世界首富",
-    create_at: "2020年3月",
+    description: '百家银行齐聚畅谈数字金融顶层设计与精准施策',
+    author: '数字金融',
+    authorTitle: '数字金融',
+    create_at: '2020年3月',
     blogSingleImg: blogSingleImg1,
-    comment: "35",
-    blClass: "format-standard-image",
+    comment: '35',
+    blClass: 'format-standard-image',
+    detail: article1,
+    comments: [
+      {
+        // avatar: '',
+        author: '华尔街之狼Pro',
+        time: '2020年3月21日 19:23:21',
+        detail:
+          '二十年里程碑！从纪录片能看到数字金融从工具到生态的跃迁——早期网银只是渠道迁移，现在AI风控、区块链跨境支付已成标配。但普惠金融的‘不可能三角’仍是痛点，期待下一程技术破局。',
+      },
+    ],
   },
   {
-    id: "2",
-    title: "We provide advanced solutions growin your online business",
-    screens: blogImg2,
-    description:
-      "Consectetur adipiscing elit. Purusout phasellus malesuada lectus.",
-    author: "Konal Biry",
-    authorTitle: "Creative Director",
-    create_at: "13 Dec,2022",
-    blogSingleImg: blogSingleImg2,
-    comment: "80",
-    blClass: "format-standard-image",
+    id: '2',
+    title: '第二十届数字金融联合宣传年智享2024特别活动',
+    screens: blogImg1,
+    description: '百家银行齐聚畅谈数字金融顶层设计与精准施策',
+    author: '数字金融',
+    authorTitle: '数字金融',
+    create_at: '2020年3月',
+    blogSingleImg: blogSingleImg1,
+    comment: '35',
+    blClass: 'format-standard-image',
+    detail: article1,
   },
   {
-    id: "3",
-    title: "Many desktop publishing packag and web page editors use.",
-    screens: blogImg3,
-    description:
-      "Consectetur adipiscing elit. Purusout phasellus malesuada lectus.",
-    author: "Aliza Anny",
-    authorTitle: "Art Director",
-    create_at: "22 Dec,2022",
-    blogSingleImg: blogSingleImg3,
-    comment: "95",
-    blClass: "format-video",
+    id: '3',
+    title: '第二十届数字金融联合宣传年智享2024特别活动',
+    screens: blogImg1,
+    description: '百家银行齐聚畅谈数字金融顶层设计与精准施策',
+    author: '数字金融',
+    authorTitle: '数字金融',
+    create_at: '2020年3月',
+    blogSingleImg: blogSingleImg1,
+    comment: '35',
+    blClass: 'format-standard-image',
+    detail: article1,
   },
-];
-export default blogs;
+  {
+    id: '4',
+    title: '第二十届数字金融联合宣传年智享2024特别活动',
+    screens: blogImg1,
+    description: '百家银行齐聚畅谈数字金融顶层设计与精准施策',
+    author: '数字金融',
+    authorTitle: '数字金融',
+    create_at: '2020年3月',
+    blogSingleImg: blogSingleImg1,
+    comment: '35',
+    blClass: 'format-standard-image',
+    detail: article1,
+  },
+  {
+    id: '5',
+    title: '第二十届数字金融联合宣传年智享2024特别活动',
+    screens: blogImg1,
+    description: '百家银行齐聚畅谈数字金融顶层设计与精准施策',
+    author: '数字金融',
+    authorTitle: '数字金融',
+    create_at: '2020年3月',
+    blogSingleImg: blogSingleImg1,
+    comment: '35',
+    blClass: 'format-standard-image',
+    detail: article1,
+  },
+]
+export default blogs

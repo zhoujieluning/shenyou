@@ -3,6 +3,13 @@
 19. wpo-blog-pg-section
 --------------------------------------------------------------*/
 .wpo-blog-pg-section {
+	.multi-line-ellipsis {
+		text-indent: 2rem;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3; /* 限制显示的行数 */
+    overflow: hidden; /* 超出部分隐藏 */
+  }
 	.wpo-blog-content {
 
 		.post {
