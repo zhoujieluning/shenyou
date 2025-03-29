@@ -9,13 +9,14 @@ import hero2 from '../../images/slider/banner2.png'
 import hero3 from '../../images/slider/banner3.png'
 
 const settings = {
-  // dots: true,
+  dots: true,
+  infinite: true,
   arrows: true,
   speed: 1200,
   slidesToShow: 3,
   slidesToScroll: 1,
-  autoplay: false,
-  autoplaySpeed: 1000,
+  autoplay: true,
+  autoplaySpeed: 1500,
   fade: true,
   // centerMode: true,
 }
