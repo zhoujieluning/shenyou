@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import HeaderTopbar2 from '../HeaderTopbar2/HeaderTopbar2'
 import MobileMenu from '../MobileMenu/MobileMenu'
-import Logo from '../../images/logo-2.png'
+import Logo from '../../images/logo.png'
 
 const Header3 = (props) => {
   const [menuActive, setMenuState] = useState(false)
@@ -33,7 +33,7 @@ const Header3 = (props) => {
                     className="navbar-brand"
                     to="/home"
                   >
-                    <img src={Logo} alt="" />
+                    <img src={Logo} alt="" style={{ width: '120px' }} />
                   </Link>
                 </div>
               </div>

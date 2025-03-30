@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import avatar1 from '../../images/blog-details/comments-author/avatar1.png'
 import blog4 from '../../images/blog-details/comments-author/img-2.jpg'
@@ -9,14 +9,59 @@ import gl2 from '../../images/blog/img-2.jpg'
 import blogs from '../../api/blogs'
 import { useParams } from 'react-router-dom'
 import BlogSidebar from '../BlogSidebar/BlogSidebar.js'
+import { postComment, getComments } from '../../api/tcb'
 
 const BlogSingle = (props) => {
   const { id } = useParams()
+  const [username, setUsername] = useState('')
+  const [content, setContent] = useState('')
+  const [comments, setComments] = useState([])
+  const [loading, setLoading] = useState(false)
 
   const BlogDetails = blogs.find((item) => item.id === id)
+  const [articleId] = useState(BlogDetails.id) // 文章ID
 
-  const submitHandler = (e) => {
+  useEffect(() => {
+    loadComments()
+  }, [])
+
+  const a = {
+    _id: '6a580dc967e958110030aa77475c4144',
+    articleId: '1',
+    content:
+      '二十年里程碑！从纪录片能看到数字金融从工具到生态的跃迁——早期网银只是渠道迁移，现在AI风控、区块链跨境支付已成标配。但普惠金融的‘不可能三角’仍是痛点，期待下一程技术破局。',
+    createdAt: '2025年3月30日 22:41:20',
+    username: '华尔街之狼Pro',
+  }
+
+  // 加载留言列表
+  const loadComments = async () => {
+    try {
+      setLoading(true)
+      const res = await getComments(BlogDetails.id)
+      setComments(res)
+    } catch (error) {
+      console.error('获取留言失败:', error)
+    } finally {
+      setLoading(false)
+    }
+  }
+
+  // 提交留言
+  const submitHandler = async (e) => {
     e.preventDefault()
+    try {
+      if (!username || !content) {
+        alert('请填写用户名和评论')
+        return
+      }
+      await postComment(articleId, username, content)
+      alert('评论成功')
+      setContent('')
+      loadComments() // 重新加载留言列表
+    } catch (error) {
+      alert('评论失败: ' + error.message)
+    }
   }
 
   return (
@@ -24,7 +69,7 @@ const BlogSingle = (props) => {
       <div className="container">
         <div className="row">
           <div className={`col col-lg-8 col-12 ${props.blRight}`}>
-            <div className="wpo-blog-content">
+            <div className="wpo-blog-content" style={{ padding: '0 10px' }}>
               <div className="post format-standard-image">
                 <div className="entry-media">
                   <img src={BlogDetails.blogSingleImg} alt="" />
@@ -134,34 +179,63 @@ const BlogSingle = (props) => {
                   </Link>
                 </div>
               </div> */}
-
+              <div className="comment-respond">
+                <h3 className="comment-reply-title">发表评论</h3>
+                <form
+                  onSubmit={submitHandler}
+                  id="commentform"
+                  className="comment-form"
+                >
+                  <div className="form-textarea">
+                    <textarea
+                      id="comment"
+                      value={content}
+                      onChange={(e) => setContent(e.target.value)}
+                      placeholder="写下你的评论..."
+                    ></textarea>
+                  </div>
+                  <div className="form-inputs">
+                    {/* <input placeholder="Website" type="url" /> */}
+                    <input
+                      placeholder="昵称"
+                      type="text"
+                      value={username}
+                      onChange={(e) => setUsername(e.target.value)}
+                    />
+                    {/* <input placeholder="Email" type="email" /> */}
+                  </div>
+                  <div className="form-submit">
+                    <input id="submit" value="提交" type="submit" />
+                  </div>
+                </form>
+              </div>
               <div className="comments-area">
                 <div className="comments-section">
-                  <h3 className="comments-title">评论</h3>
+                  <h3>评论</h3>
                   <ol className="comments">
-                    {BlogDetails.comments.map((comment) => (
+                    {comments.map((comment) => (
                       <li
                         className="comment even thread-even depth-1"
                         id="comment-1"
                       >
                         <div id="div-comment-1">
-                          <div className="comment-theme">
+                          {/* <div className="comment-theme">
                             <div className="comment-image">
                               <img src={avatar1} alt="" />
                             </div>
-                          </div>
+                          </div> */}
                           <div className="comment-main-area">
                             <div className="comment-wrapper">
                               <div className="comments-meta">
                                 <h4>
-                                  {comment.author}{' '}
+                                  {comment.username}{' '}
                                   <span className="comments-date">
-                                    {comment.time}
+                                    {comment.createdAt}
                                   </span>
                                 </h4>
                               </div>
                               <div className="comment-area">
-                                <p>{comment.detail}</p>
+                                <p>{comment.content}</p>
                                 {/* <div className="comments-reply">
                                 <a className="comment-reply-link">
                                   <span>Reply</span>
@@ -251,29 +325,6 @@ const BlogSingle = (props) => {
                       </li>
                     ))}
                   </ol>
-                </div>
-                <div className="comment-respond">
-                  <h3 className="comment-reply-title">发表评论</h3>
-                  <form
-                    onSubmit={submitHandler}
-                    id="commentform"
-                    className="comment-form"
-                  >
-                    <div className="form-textarea">
-                      <textarea
-                        id="comment"
-                        placeholder="写下你的评论..."
-                      ></textarea>
-                    </div>
-                    <div className="form-inputs">
-                      {/* <input placeholder="Website" type="url" /> */}
-                      <input placeholder="姓名" type="text" />
-                      {/* <input placeholder="Email" type="email" /> */}
-                    </div>
-                    <div className="form-submit">
-                      <input id="submit" value="提交" type="submit" />
-                    </div>
-                  </form>
                 </div>
               </div>
             </div>

@@ -33,7 +33,7 @@ const Header = (props) => {
                     className="navbar-brand"
                     to="/home"
                   >
-                    <img src={Logo} alt="" />
+                    <img src={Logo} alt="" style={{ width: '120px' }} />
                   </Link>
                 </div>
               </div>
@@ -52,10 +52,10 @@ const Header = (props) => {
                       </Link>
                     </li>
                     <li className="menu-item-has-children">
-                      <a href="#ServiceSection">大宗商品交易</a>
+                      <Link to="#ServiceSection">大宗商品交易</Link>
                     </li>
                     <li className="menu-item-has-children">
-                      <a href="#BlogSection">金融论坛</a>
+                      <Link to="#BlogSection">金融论坛</Link>
                     </li>
                   </ul>
                 </div>

@@ -5,6 +5,7 @@
 
 	article p {
 		text-indent: 2rem;
+		text-align: justify;
 	}
 
 	.entry-meta {
@@ -537,7 +538,7 @@
 		}
 
 		.comment-main-area {
-			padding-left: 100px;
+			// padding-left: 100px;
 
 			@include media-query(767px) {
 				padding-left: 0;

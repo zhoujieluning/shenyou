@@ -59,8 +59,8 @@ const BlogSection = () => {
             className="row justify-content-center align-items-center"
             onClick={ClickHandler}
             style={{
-              marginTop: 140,
-              marginBottom: 40,
+              marginTop: 120,
+              marginBottom: 80,
               borderRadius: 6,
               width: 120,
               height: 40,

@@ -42,7 +42,7 @@ const ContactInfo = (props) => {
                 </div>
                 <div className="office-info-text">
                   <p>深圳市福田区XXXXXX</p>
-                  <span>公司地址</span>
+                  {/* <span>公司地址</span> */}
                 </div>
               </div>
             </div>
@@ -55,7 +55,7 @@ const ContactInfo = (props) => {
                 </div>
                 <div className="office-info-text">
                   <p>185 1323 8932</p>
-                  <span>电话</span>
+                  {/* <span>电话</span> */}
                 </div>
               </div>
             </div>
@@ -68,7 +68,7 @@ const ContactInfo = (props) => {
                 </div>
                 <div className="office-info-text">
                   <p>xxxxxxxxxxxxxx@gmail.com</p>
-                  <span>邮箱</span>
+                  {/* <span>邮箱</span> */}
                 </div>
               </div>
             </div>

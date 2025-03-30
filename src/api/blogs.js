@@ -22,15 +22,6 @@ const blogs = [
     comment: '35',
     blClass: 'format-standard-image',
     detail: article1,
-    comments: [
-      {
-        // avatar: '',
-        author: '华尔街之狼Pro',
-        time: '2020年3月21日 19:23:21',
-        detail:
-          '二十年里程碑！从纪录片能看到数字金融从工具到生态的跃迁——早期网银只是渠道迁移，现在AI风控、区块链跨境支付已成标配。但普惠金融的‘不可能三角’仍是痛点，期待下一程技术破局。',
-      },
-    ],
   },
   {
     id: '2',

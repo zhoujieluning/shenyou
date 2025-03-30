@@ -11,6 +11,7 @@
     overflow: hidden; /* 超出部分隐藏 */
   }
 	.wpo-blog-content {
+		
 
 		.post {
 			margin-bottom: 70px;
@@ -330,7 +331,7 @@
 .blog-pg-fullwidth {
 	.wpo-blog-content {
 		@include widther(1200px) {
-			padding: 0;
+			padding: 0;	
 		}
 	}
 }

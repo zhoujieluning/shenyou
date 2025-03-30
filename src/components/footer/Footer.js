@@ -178,7 +178,9 @@ const Footer = (props) => {
         <div className="container">
           <div className="row align-items-center">
             <div className="col col-lg-6 col-md-12 col-12">
-              <ul>{/* <li>版权归申优所有</li> */}</ul>
+              <ul>
+                <li>版权归 © 申优 所有，未经许可不得转载或商用</li>
+              </ul>
             </div>
             {/* <div className="col col-lg-6 col-md-12 col-12">
               <div className="link">

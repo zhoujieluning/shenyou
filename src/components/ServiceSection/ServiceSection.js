@@ -6,11 +6,11 @@ import { Link } from 'react-router-dom'
 import SectionTitle2 from '../SectionTitle2/SectionTitle2'
 import Services from '../../api/service'
 
-import simg from '../../../src/images/service/1.jpg'
-import simg2 from '../../../src/images/service/2.jpg'
+import simg from '../../../src/images/service/1.png'
+import simg2 from '../../../src/images/service/2.png'
 import simg3 from '../../../src/images/service/3.png'
 import simg4 from '../../../src/images/service/4.png'
-import simg5 from '../../../src/images/service/5.jpg'
+import simg5 from '../../../src/images/service/5.png'
 
 const settings = {
   dots: true,
@@ -74,12 +74,12 @@ const ServiceSection = () => {
     <section
       id="ServiceSection"
       className="wpo-service-section section-padding"
-      style={{ marginTop: '50px' }}
+      // style={{ marginTop: '50px' }}
     >
       <div className="container">
         <SectionTitle2
           //   subTitle={"Our Services"}
-          Title={'大宗商品交易论坛'}
+          Title={'大宗商品交易'}
         />
         <div
           className="row-grid"
@@ -90,10 +90,10 @@ const ServiceSection = () => {
             gap: 30,
           }}
         >
+          <img src={simg3} />
           <img src={simg2} />
           <img src={simg5} />
           <img src={simg} />
-          <img src={simg3} />
           <img src={simg4} />
           {/* <Slider {...settings}>
             {Services.map((service, srv) => (

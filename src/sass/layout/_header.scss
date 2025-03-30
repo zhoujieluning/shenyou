@@ -1315,6 +1315,27 @@
 
 		}
 
+		.menu-header {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 20px 10px 20px 30px;
+			img {
+				width: 120px; 
+				// height: 70px;
+			}
+		}
+
+		.item-wrapper {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding-left: 30px;
+			img {
+				width: 25px;
+			}
+		}
+
 		.menu-close {
 			display: block;
 			z-index: 99;
@@ -1323,10 +1344,6 @@
 			color: $white;
 			border: 0;
 			text-align: center;
-			margin-left: auto;
-			margin-top: 30px;
-			margin-right: 30px;
-			margin-bottom: 30px;
 			width: 40px;
 			height: 40px;
 			line-height: 40px;
