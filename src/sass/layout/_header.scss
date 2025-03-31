@@ -1335,7 +1335,19 @@
 			img {
 				width: 25px;
 			}
+			&::after {
+				content: "";
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 90%;
+				height: 5px;
+				background-image: url('../../images/line.png');
+				background-repeat: repeat-x;
+			}
 		}
+
+
 
 
 		.menu-close {

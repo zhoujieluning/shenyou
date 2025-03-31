@@ -1,7 +1,24 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import { message } from 'antd'
 import shape from '../../images/ct-shape.png'
+import { submitPhone } from '../../api/tcb'
 
 const ContactInfo = (props) => {
+  const [phone, setPhone] = useState('')
+  const submitHandler = async (e) => {
+    e.preventDefault()
+    try {
+      if (!phone) {
+        message.warning('请填写您的手机号码')
+        return
+      }
+      await submitPhone(phone)
+      message.success('提交成功')
+      setPhone('')
+    } catch (error) {
+      message.error('提交失败: ' + error.message)
+    }
+  }
   return (
     <section id="ContactInfo" className="contact-info-section section-padding">
       <div className="container">
@@ -13,12 +30,14 @@ const ContactInfo = (props) => {
             className=" newsletter-widget"
             style={{ display: 'flex', justifyContent: 'center' }}
           >
-            <form onSubmit={() => {}}>
+            <form onSubmit={submitHandler}>
               <div className="input-1">
                 <input
                   type="phone"
                   className="form-control"
                   placeholder="手机号"
+                  onChange={(e) => setPhone(e.target.value)}
+                  value={phone}
                   required
                 />
               </div>
@@ -54,7 +73,7 @@ const ContactInfo = (props) => {
                   </div>
                 </div>
                 <div className="office-info-text">
-                  <p>185 1323 8932</p>
+                  <p>185 1111 1111</p>
                   {/* <span>电话</span> */}
                 </div>
               </div>

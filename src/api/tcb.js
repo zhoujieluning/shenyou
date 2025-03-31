@@ -57,3 +57,16 @@ export async function getComments(articleId) {
     throw error
   }
 }
+
+// 直接操作数据库方式
+export async function submitPhone(phone) {
+  try {
+    const result = await app.database().collection('users').add({
+      phone,
+    })
+    return result
+  } catch (error) {
+    console.error('提交手机号失败:', error)
+    throw error
+  }
+}
