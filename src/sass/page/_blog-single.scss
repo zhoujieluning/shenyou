@@ -14,7 +14,7 @@
 		margin: 35px 0;
 
 		@include media-query(767px) {
-			margin: 25px 0;
+			// margin: 25px 0;
 		}
 
 		ul{
@@ -47,7 +47,7 @@
 				}
 	
 				&+li{
-					margin-left: 20px;
+					margin-left: 10px;
 					padding-left: 20px;
 					position: relative;
 
@@ -63,25 +63,25 @@
 						border-radius: 50%;
 
 						@include media-query(440px) {
-							display: none;
+							// display: none;
 						}
 					}
 
 					@include media-query(440px) {
-						margin-left: 0;
-						padding-left: 0;
+						// margin-left: 0;
+						// padding-left: 0;
 					}
 				}
 	
 				@include media-query(767px) {
-					font-size: 12px;
-					font-size: calc-rem-value(12);
+					// font-size: 12px;
+					// font-size: calc-rem-value(12);
 				}
 	
 				@include media-query(440px) {
-					float: none;
-					display: block;
-					margin-bottom: 5px;
+					// float: none;
+					// display: block;
+					// margin-bottom: 5px;
 				}
 	
 			}

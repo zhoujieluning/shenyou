@@ -9,8 +9,10 @@ import icon1 from '../../images/icon/home.png'
 import icon2 from '../../images/icon/trade.png'
 import icon3 from '../../images/icon/forum.png'
 import icon4 from '../../images/icon/call.png'
+import menu from '../../images/icon/menu.png'
 
 import Logo from '../../images/logo.png'
+import back from '../../images/icon/back.png'
 
 const menus = [
   {
@@ -23,20 +25,20 @@ const menus = [
   {
     id: 2,
     title: '大宗商品交易',
-    link: '#ServiceSection',
+    link: '/home#ServiceSection',
     icon: icon2,
   },
 
   {
     id: 3,
     title: '金融论坛',
-    link: '#BlogSection',
+    link: '/blog-fullwidth',
     icon: icon3,
   },
   {
     id: 4,
     title: '联系我们',
-    link: '#ContactInfo',
+    link: '/home#ContactInfo',
     icon: icon4,
   },
 ]
@@ -54,22 +56,31 @@ const MobileMenu = () => {
       <div className={`mobileMenu ${menuActive ? 'show' : ''}`}>
         <div className="menu-header">
           <img src={Logo} />
-          <div className="menu-close">
-            <div className="clox" onClick={() => setMenuState(!menuActive)}>
-              <i className="ti-close"></i>
-            </div>
-          </div>
+          {/* <div className="menu-close"> */}
+          {/* <div className="clox" onClick={() => setMenuState(!menuActive)}> */}
+          {/* <i className="ti-close"></i> */}
+          <img
+            src={back}
+            style={{ width: '25px' }}
+            onClick={() => setMenuState(!menuActive)}
+          />
+          {/* </div> */}
+          {/* </div> */}
         </div>
 
         <ul className="responsivemenu">
           {menus.map((item, mn) => {
             return (
               <ListItem key={mn}>
-                <div className="item-wrapper">
+                <div
+                  className="item-wrapper"
+                  onClick={() => {
+                    setMenuState(false)
+                    ClickHandler()
+                  }}
+                >
                   <img src={item.icon} />
-                  <Link to={item.link} onClick={() => setMenuState(false)}>
-                    {item.title}
-                  </Link>
+                  <Link to={item.link}>{item.title}</Link>
                 </div>
               </ListItem>
             )
@@ -78,11 +89,12 @@ const MobileMenu = () => {
       </div>
 
       <div className="showmenu" onClick={() => setMenuState(!menuActive)}>
-        <button type="button" className="navbar-toggler open-btn">
+        {/* <button type="button" className="navbar-toggler open-btn">
           <span className="icon-bar first-angle"></span>
           <span className="icon-bar middle-angle"></span>
           <span className="icon-bar last-angle"></span>
-        </button>
+        </button> */}
+        <img src={menu} style={{ width: '30px' }} />
       </div>
     </div>
   )

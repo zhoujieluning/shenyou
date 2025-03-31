@@ -1328,13 +1328,15 @@
 
 		.item-wrapper {
 			display: flex;
-			justify-content: space-between;
+			// justify-content: space-between;
 			align-items: center;
 			padding-left: 30px;
+			// border-bottom: 1px solid #3f4041;
 			img {
 				width: 25px;
 			}
 		}
+
 
 		.menu-close {
 			display: block;
@@ -1999,8 +2001,8 @@
 
 .fixed-navbar.active .wpo-header-style-1,
 .fixed-navbar.active .wpo-header-style-5 .wpo-site-header {
-	height: 80px;
-	background: #1a384c;
+	// height: 80px;
+	background: #ffb22c;
 	max-width: 100%;
 }
 

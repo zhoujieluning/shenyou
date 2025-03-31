@@ -7,7 +7,7 @@ import blogSingleImg1 from '../images/blog/blog-single/img-1.jpg'
 import blogSingleImg2 from '../images/blog/blog-single/img-2.jpg'
 import blogSingleImg3 from '../images/blog/blog-single/img-3.jpg'
 
-import { article1 } from './article'
+import { article1, article2, article3 } from './article'
 
 const blogs = [
   {
@@ -20,96 +20,38 @@ const blogs = [
     create_at: '2020年3月',
     blogSingleImg: blogSingleImg1,
     comment: '35',
+    read: '12833',
     blClass: 'format-standard-image',
     detail: article1,
   },
   {
     id: '2',
-    title: '第二十届数字金融联合宣传年智享2024特别活动',
-    screens: blogImg1,
-    description: '百家银行齐聚畅谈数字金融顶层设计与精准施策',
-    author: '数字金融',
-    authorTitle: '数字金融',
-    create_at: '2020年3月',
-    blogSingleImg: blogSingleImg1,
-    comment: '35',
+    title: '科技春晚CES来袭！聚焦四大看点',
+    screens: blogImg2,
+    description:
+      '科技春晚”CES来袭！聚焦四大看点：英伟达或进军AI PC市场，AI眼镜将站“C位”',
+    author: '国际资讯',
+    authorTitle: '国际资讯',
+    create_at: '2024年12月',
+    blogSingleImg: blogSingleImg2,
+    comment: '28',
+    read: '8755',
     blClass: 'format-standard-image',
-    detail: article1,
-    comments: [
-      {
-        // avatar: '',
-        author: '华尔街之狼Pro',
-        time: '2020年3月21日 19:23:21',
-        detail:
-          '二十年里程碑！从纪录片能看到数字金融从工具到生态的跃迁——早期网银只是渠道迁移，现在AI风控、区块链跨境支付已成标配。但普惠金融的‘不可能三角’仍是痛点，期待下一程技术破局。',
-      },
-    ],
+    detail: article2,
   },
   {
     id: '3',
-    title: '第二十届数字金融联合宣传年智享2024特别活动',
-    screens: blogImg1,
+    title: '战略布局银行体系稳健发展，5000亿注资四大行落地',
+    screens: blogImg3,
     description: '百家银行齐聚畅谈数字金融顶层设计与精准施策',
-    author: '数字金融',
-    authorTitle: '数字金融',
-    create_at: '2020年3月',
-    blogSingleImg: blogSingleImg1,
-    comment: '35',
+    author: '后台管理员',
+    authorTitle: '后台管理员',
+    create_at: '2024年8月',
+    blogSingleImg: blogSingleImg3,
+    comment: '46',
+    read: '5832',
     blClass: 'format-standard-image',
-    detail: article1,
-    comments: [
-      {
-        // avatar: '',
-        author: '华尔街之狼Pro',
-        time: '2020年3月21日 19:23:21',
-        detail:
-          '二十年里程碑！从纪录片能看到数字金融从工具到生态的跃迁——早期网银只是渠道迁移，现在AI风控、区块链跨境支付已成标配。但普惠金融的‘不可能三角’仍是痛点，期待下一程技术破局。',
-      },
-    ],
-  },
-  {
-    id: '4',
-    title: '第二十届数字金融联合宣传年智享2024特别活动',
-    screens: blogImg1,
-    description: '百家银行齐聚畅谈数字金融顶层设计与精准施策',
-    author: '数字金融',
-    authorTitle: '数字金融',
-    create_at: '2020年3月',
-    blogSingleImg: blogSingleImg1,
-    comment: '35',
-    blClass: 'format-standard-image',
-    detail: article1,
-    comments: [
-      {
-        // avatar: '',
-        author: '华尔街之狼Pro',
-        time: '2020年3月21日 19:23:21',
-        detail:
-          '二十年里程碑！从纪录片能看到数字金融从工具到生态的跃迁——早期网银只是渠道迁移，现在AI风控、区块链跨境支付已成标配。但普惠金融的‘不可能三角’仍是痛点，期待下一程技术破局。',
-      },
-    ],
-  },
-  {
-    id: '5',
-    title: '第二十届数字金融联合宣传年智享2024特别活动',
-    screens: blogImg1,
-    description: '百家银行齐聚畅谈数字金融顶层设计与精准施策',
-    author: '数字金融',
-    authorTitle: '数字金融',
-    create_at: '2020年3月',
-    blogSingleImg: blogSingleImg1,
-    comment: '35',
-    blClass: 'format-standard-image',
-    detail: article1,
-    comments: [
-      {
-        // avatar: '',
-        author: '华尔街之狼Pro',
-        time: '2020年3月21日 19:23:21',
-        detail:
-          '二十年里程碑！从纪录片能看到数字金融从工具到生态的跃迁——早期网银只是渠道迁移，现在AI风控、区块链跨境支付已成标配。但普惠金融的‘不可能三角’仍是痛点，期待下一程技术破局。',
-      },
-    ],
+    detail: article3,
   },
 ]
 export default blogs

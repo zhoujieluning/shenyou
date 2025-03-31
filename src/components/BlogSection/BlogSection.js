@@ -14,6 +14,7 @@ const BlogSection = () => {
     <div
       id="BlogSection"
       className="wpo-blog-area-s2 section-padding section-bg"
+      style={{ paddingTop: '50px' }}
     >
       <div className="container">
         <SectionTitle subTitle={''} Title={'金融论坛'} />

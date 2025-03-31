@@ -44,7 +44,7 @@ const style = {
 
 const Hero = () => {
   return (
-    <section style={{ marginTop: '78px' }}>
+    <section style={{ marginTop: '76px' }}>
       <div className="hero-slider">
         <Slider {...settings} className="slide-banner">
           <img src={hero1} alt="" style={{ width: '100vw' }} />

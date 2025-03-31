@@ -74,7 +74,7 @@ const ServiceSection = () => {
     <section
       id="ServiceSection"
       className="wpo-service-section section-padding"
-      // style={{ marginTop: '50px' }}
+      style={{ paddingTop: '50px' }}
     >
       <div className="container">
         <SectionTitle2

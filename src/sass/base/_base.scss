@@ -1,6 +1,7 @@
 /* 1.1	Theme Reset Style */
 html {
     font-size: $base-font-size + px;
+    scroll-padding-top: 80px;
 }
 :root {
     scroll-behavior: unset;
@@ -296,6 +297,7 @@ img{
 .fancybox-wrap {
   z-index: 99999 !important;
 }
+
 
 
 

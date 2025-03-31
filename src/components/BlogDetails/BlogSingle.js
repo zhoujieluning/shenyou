@@ -10,6 +10,7 @@ import blogs from '../../api/blogs'
 import { useParams } from 'react-router-dom'
 import BlogSidebar from '../BlogSidebar/BlogSidebar.js'
 import { postComment, getComments } from '../../api/tcb'
+import { message } from 'antd'
 
 const BlogSingle = (props) => {
   const { id } = useParams()
@@ -52,20 +53,23 @@ const BlogSingle = (props) => {
     e.preventDefault()
     try {
       if (!username || !content) {
-        alert('请填写用户名和评论')
+        message.warning('请填写用昵称和评论')
         return
       }
       await postComment(articleId, username, content)
-      alert('评论成功')
+      message.success('评论成功')
       setContent('')
       loadComments() // 重新加载留言列表
     } catch (error) {
-      alert('评论失败: ' + error.message)
+      message.error('评论失败: ' + error.message)
     }
   }
 
   return (
-    <section className="wpo-blog-single-section section-padding">
+    <section
+      className="wpo-blog-single-section section-padding"
+      style={{ paddingTop: '50px' }}
+    >
       <div className="container">
         <div className="row">
           <div className={`col col-lg-8 col-12 ${props.blRight}`}>
@@ -79,6 +83,10 @@ const BlogSingle = (props) => {
                     <li>
                       <i className="fi flaticon-user"></i>
                       <a>{BlogDetails.author}</a>
+                    </li>
+                    <li>
+                      <i className="fi flaticon-comment-white-oval-bubble"></i>{' '}
+                      阅读 {BlogDetails.read}
                     </li>
                     <li>
                       <i className="fi flaticon-comment-white-oval-bubble"></i>{' '}

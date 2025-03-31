@@ -11,11 +11,14 @@ const ClickHandler = () => {
 
 const BlogList = (props) => {
   return (
-    <section className="wpo-blog-pg-section section-padding">
+    <section
+      className="wpo-blog-pg-section section-padding"
+      style={{ paddingTop: '50px' }}
+    >
       <div className="container">
         <div className="row">
           <div className={`col col-lg-8 col-12 ${props.blRight}`}>
-            <div className="wpo-blog-content">
+            <div className="wpo-blog-content" style={{ padding: '0 10px' }}>
               {blogs.map((blog, bitem) => (
                 <div className={`post  ${blog.blClass}`} key={bitem}>
                   <div className="entry-media video-holder">
@@ -32,6 +35,10 @@ const BlogList = (props) => {
                         >
                           {blog.authorTitle}
                         </Link>{' '}
+                      </li>
+                      <li>
+                        <i className="fi flaticon-comment-white-oval-bubble"></i>{' '}
+                        阅读 {blog.read}{' '}
                       </li>
                       <li>
                         <i className="fi flaticon-comment-white-oval-bubble"></i>{' '}
