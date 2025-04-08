@@ -1,208 +1,129 @@
 /* 3.2 wpo-about-sections */
 
-.wpo-about-section,
-.wpo-about-section-s3,
-.wpo-about-section-s4 {
-    .wpo-about-wrap {
-        .wpo-about-img {
-            position: relative;
-            z-index: 1;
-            text-align: center;
-            max-width: 570px;
-            border-radius: 6px;
+.wpo-about-section{
+    @media(min-width:1600px) {
+        padding: 70px 180px;
+        
+    }
+    @media(max-width:1600px) {
+        padding: 70px 160px;
+        
+    }
+    @media(max-width:1200px) {
+        padding: 50px 50px;
+        
+    }
+    @media(max-width:991px) {
+        padding: 40px 50px;
+    }
+    // @media(max-width:767px){
+    //     padding: 0;
+    //   }
+    @media(max-width:575px) {
+        padding: 30px 0;
 
-            &:before {
-                position: absolute;
-                left: 0;
-                top: 0;
-                width: 100%;
-                height: 100%;
-                content: "";
-                background: rgba(20, 33, 43, .25);
-                border-radius: 6px;
-            }
-
-            img {
-                width: 100%;
-                border-radius: 6px;
-            }
-
-            .wpo-ab-shape-1 {
-                position: absolute;
-                left: -70px;
-                bottom: 100px;
-                z-index: 1;
-                -webkit-animation: bounceTop 3s linear infinite;
-                animation: bounceTop 3s linear infinite;
-
-                @media(max-width:575px) {
-                    left: 0;
-                }
-            }
-
-            .wpo-ab-shape-2 {
-                position: absolute;
-                right: 35px;
-                top: 35px;
-                z-index: 11;
-                -webkit-animation: bounceTop 3s linear infinite;
-                animation: bounceTop 3s linear infinite;
-            }
-
-            .wpo-about-exprience {
-                background: url(../../images/text-bg.png) no-repeat center center;
-                position: relative;
-                background-size: cover;
-                width: 520px;
-                position: absolute;
-                left: 30px;
-                bottom: -20px;
-                padding: 20px;
-                transform: rotate(360deg);
-                height: 150px;
-
-                @media(max-width:1200px) {
-                    width: 380px;
-                    height: 100px;
-                }
-
-                @media(max-width:991px) {
-                    width: 520px;
-                    height: 150px;
-                }
-
-                @media(max-width:767px) {
-                    width: 400px;
-                    height: 120px;
-                }
-
-                @media(max-width:475px) {
-                    width: 300px;
-                    height: 80px;
-                    left: 10px;
-                }
-
-                h3 {
-                    font-size: 43px;
-                    margin-top: 25px;
-                    transform: rotate(354deg);
-                    color: $white;
-
-                    @media(max-width:1200px) {
-                        font-size: 25px;
-                        margin-top: 15px;
-                    }
-
-                    @media(max-width:991px) {
-                        font-size: 43px;
-                        margin-top: 25px;
-                    }
-
-                    @media(max-width:767px) {
-                        font-size: 35px;
-                        margin-top: 15px;
-                    }
-
-                    @media(max-width:475px) {
-                        font-size: 20px;
-                        margin-top: 10px;
-                    }
-                }
-            }
-
-            .wpo-ab-img-2{
-                display: none;
-            }
-
-        }
     }
 
-    .wpo-about-text {
-        max-width: 600px;
-        position: relative;
-
-        @media(max-width:1400px) {
-            padding-left: 40px;
+    .container {
+        @media(max-width:575px) {
+    
         }
-
-        @media(max-width:991px) {
-            padding-left: 0px;
-            padding-top: 70px;
-        }
-
-        h4 {
-            font-size: 21px;
-            color: $theme-primary-color;
-            font-family: $base-font;
-
-            @media(max-width:1200px) {
-                font-size: 18px;
+        .about-title {
+            margin-bottom: 70px;
+            font-size: 55px;
+            font-family: "PT Serif", serif;
+            font-weight: 700;
+            color: #141414E5;
+            @include media-query(991px) {
+                font-size: 35px;
+                line-height: 55px;
+                margin-bottom: 50px;
             }
-
-            @media(max-width:500px) {
-                font-size: 14px;
+    
+            @include media-query(575px) {
+                font-size: 28px;
+                margin-bottom: 30px;
             }
         }
 
-        h2 {
-            font-size: 60px;
-            margin: 30px 0;
-            font-weight: 400;
-            line-height: 70px;
-
-            @media(max-width:1400px) {
-                font-size: 55px;
-            }
-
-            @media(max-width:1200px) {
-                font-size: 36px;
-                line-height: 50px;
-                margin: 20px 0;
-            }
-
-            @media(max-width:500px) {
-                font-size: 26px;
-                line-height: 36px;
-                margin: 15px 0;
-            }
-
-            span {
-                color: $theme-primary-color;
-            }
-        }
-
-        b {
-            color: $dark-gray2;
-        }
-
-        p {
-            font-size: 18px;
-            margin-bottom: 35px;
-
-            @media(max-width:500px) {
-                font-size: 16px;
-                margin-bottom: 20px;
-            }
-        }
-
-        .wpo-ab-shape-3 {
-            position: absolute;
-            right: -50px;
-            bottom: -50px;
-            -webkit-animation: bounceTop 3s linear infinite;
-            animation: bounceTop 3s linear infinite;
-
-            @media(max-width:1200px) {
-                right: -20px;
-                bottom: -20px;
-            }
-
+        .card-wrapper {
+            
             @media(max-width:575px) {
-                right: 0px;
-                bottom: -20px;
+                justify-content: center !important;
+        
+            }
+            .about-card {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                margin-bottom: 30px;
+                padding: 0; /* 清除内边距 */
+                width: 374px;
+                // height: 300px;
+                overflow: hidden;
+                @media(max-width:1200px) {
+                    width: 350px;
+                }
+                @media(max-width:991px) {
+                    width: 320px;
+                }
+                @media(max-width:575px) {
+                    width: 380px;
+                }
+
+                &::before {
+                    content: "";  /* 必须设置 content */
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: rgba(0, 0, 0, 0.4); /* 黑色半透明（透明度 0.5） */
+                    backdrop-filter: blur(2px);
+                    z-index: 2;  /* 确保蒙层在内容之上 */}
+                img {
+                    position: relative;
+                    display: block;
+                    width: 100%;
+                    z-index: 1;
+                    object-fit: cover;
+                    border-radius: 0;
+                }
+                .about-name {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: 3;
+                    width: 100%;
+                    height: 100%;
+                    color: #FFF;
+                    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.50);
+                    font-family: "Source Han Sans CN";
+                    font-weight: 400;
+                    font-size: 40px;
+                    letter-spacing: 3px;
+                    @include media-query(991px) {
+                        font-size: 30px;
+                    }
+            
+                    @include media-query(575px) {
+                        font-size: 24px;
+                    }
+                }
             }
         }
     }
+    
+
+    
+    
+    
+    
+
 }
 
 

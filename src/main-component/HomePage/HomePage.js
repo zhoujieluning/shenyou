@@ -33,10 +33,10 @@ const HomePage = () => {
     <Fragment>
       <Navbar hclass={'wpo-header-style-1'} topbarNone={'topbar-none'} />
       <Hero />
-      {/* <About abimg={abimg} /> */}
+      <About abimg={abimg} />
       <ServiceSection />
-      {/* <CtaSection />
-      <FunFact />
+      {/* <CtaSection /> */}
+      {/* <FunFact />
       <TeamSection />
       <ProjectSection />
       <Testimonial /> */}
