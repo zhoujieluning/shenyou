@@ -42,7 +42,7 @@ const list = [
 const About = (props) => {
   return (
     <section className="wpo-about-section">
-      <div className="container row justify-content-center">
+      <div className="about-container row justify-content-center">
         <div className="row justify-content-center about-title">业务介绍</div>
         <div className="row justify-content-between card-wrapper">
           {list.map((item) => (
