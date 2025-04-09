@@ -2,6 +2,7 @@ import React, { Fragment, useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import About from '../../components/about/about'
 import BlogSection from '../../components/BlogSection/BlogSection'
+import ArticleSection from '../../components/ArticleSection/ArticleSection'
 import CtaSection from '../../components/ctaSection/ctaSection'
 import Footer from '../../components/footer/Footer'
 import FunFact from '../../components/FunFact/FunFact'
@@ -40,7 +41,8 @@ const HomePage = () => {
       <TeamSection />
       <ProjectSection />
       <Testimonial /> */}
-      <BlogSection />
+      <ArticleSection />
+      {/* <BlogSection /> */}
       {/* <PartnerSection /> */}
       <ContactInfo />
       <Footer />

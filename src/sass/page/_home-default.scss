@@ -2,7 +2,7 @@
 
 .wpo-about-section{
     @media(min-width:1600px) {
-        padding: 70px 180px;
+        padding: 70px 320px;
         
     }
     @media(max-width:1600px) {
@@ -1632,4 +1632,127 @@
         }
 
     }
+}
+
+/* 3.12 article-section */
+.article-section{
+    @media(min-width:1600px) {
+        padding: 70px 280px;
+        
+    }
+    @media(max-width:1600px) {
+        padding: 70px 160px;
+        
+    }
+    @media(max-width:1200px) {
+        padding: 50px 50px;
+        
+    }
+    @media(max-width:991px) {
+        padding: 40px 50px;
+    }
+    // @media(max-width:767px){
+    //     padding: 0;
+    //   }
+    @media(max-width:575px) {
+        padding: 30px 20px;
+    }
+
+    .article-container {
+        .article-head {
+            margin-bottom: 70px;
+            font-size: 55px;
+            font-family: "PT Serif", serif;
+            font-weight: 700;
+            color: #141414E5;
+            @include media-query(991px) {
+                font-size: 35px;
+                line-height: 55px;
+                margin-bottom: 50px;
+            }
+    
+            @include media-query(575px) {
+                font-size: 28px;
+                margin-bottom: 30px;
+            }
+        }
+
+        .row-wrapper {
+            width: 100%;
+            padding: 0 100px;
+            @include media-query(991px) {
+                padding: 0 30px;
+
+            }
+            @include media-query(575px) {
+                padding: 0 0;
+            }
+            .row1 {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                flex-wrap: wrap;
+                .article-title {
+                    flex-shrink: 0;
+                    width: 60%;
+                    color:  rgba(20, 20, 20, 0.90);
+                    font-family: "Source Han Sans CN";
+                    font-size: 36px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: normal;
+                    @include media-query(575px) {
+                        font-size: 18px;
+                    }
+                }
+                .date-wrapper {
+                    color: rgba(20, 20, 20, 0.40);
+                    font-family: "Source Han Sans CN";
+                    font-size: 24px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    white-space: nowrap;
+                    @include media-query(575px) {
+                        font-size: 12px;
+                    }
+                    text {
+                        &:first-child {
+                            margin-right: 36px;
+                            @include media-query(575px) {
+                                margin-right: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+            .row2 {
+                margin-top: 8px;
+                overflow: hidden;
+                color: rgba(20, 20, 20, 0.80);
+                text-overflow: ellipsis;
+                white-space: nowrap;
+
+                font-family: "Source Han Sans CN";
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                @include media-query(575px) {
+                    font-size: 16px;
+                }
+            }
+        }
+
+        
+
+    }
+    
+
+    
+    
+    
+    
+
 }
