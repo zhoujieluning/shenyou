@@ -1,21 +1,25 @@
 /* 3.2 wpo-about-sections */
 
-.wpo-about-section{
+.wpo-about-section {
     @media(min-width:1600px) {
         padding: 70px 320px;
-        
+
     }
+
     @media(max-width:1600px) {
         padding: 70px 160px;
-        
+
     }
+
     @media(max-width:1200px) {
         padding: 50px 50px;
-        
+
     }
+
     @media(max-width:991px) {
         padding: 40px 50px;
     }
+
     // @media(max-width:767px){
     //     padding: 0;
     //   }
@@ -30,12 +34,13 @@
             font-family: "PT Serif", serif;
             font-weight: 700;
             color: #141414E5;
+
             @include media-query(991px) {
                 font-size: 35px;
                 line-height: 55px;
                 margin-bottom: 50px;
             }
-    
+
             @include media-query(575px) {
                 font-size: 28px;
                 margin-bottom: 30px;
@@ -43,40 +48,50 @@
         }
 
         .card-wrapper {
-            
+
             @media(max-width:575px) {
                 // justify-content: center !important;
             }
+
             .about-card {
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 position: relative;
                 margin-bottom: 30px;
-                padding: 0; /* 清除内边距 */
+                padding: 0;
+                /* 清除内边距 */
                 width: 374px;
                 // height: 300px;
                 overflow: hidden;
+
                 @media(max-width:1200px) {
                     width: 350px;
                 }
+
                 @media(max-width:991px) {
                     width: 320px;
                 }
+
                 @media(max-width:575px) {
                     width: 170px;
                 }
 
                 &::before {
-                    content: "";  /* 必须设置 content */
+                    content: "";
+                    /* 必须设置 content */
                     position: absolute;
                     top: 0;
                     left: 0;
                     width: 100%;
                     height: 100%;
-                    background: rgba(0, 0, 0, 0.4); /* 黑色半透明（透明度 0.5） */
+                    background: rgba(0, 0, 0, 0.4);
+                    /* 黑色半透明（透明度 0.5） */
                     backdrop-filter: blur(2px);
-                    z-index: 2;  /* 确保蒙层在内容之上 */}
+                    z-index: 2;
+                    /* 确保蒙层在内容之上 */
+                }
+
                 img {
                     position: relative;
                     display: block;
@@ -85,6 +100,7 @@
                     object-fit: cover;
                     border-radius: 0;
                 }
+
                 .about-name {
                     display: flex;
                     justify-content: center;
@@ -101,10 +117,11 @@
                     font-weight: 400;
                     font-size: 40px;
                     letter-spacing: 3px;
+
                     @include media-query(991px) {
                         font-size: 30px;
                     }
-            
+
                     @include media-query(575px) {
                         font-size: 24px;
                     }
@@ -112,12 +129,12 @@
             }
         }
     }
-    
 
-    
-    
-    
-    
+
+
+
+
+
 
 }
 
@@ -361,8 +378,8 @@
             .slick-slide {
                 padding: 0 15px;
 
-                @media(max-width:767px){
-                  padding: 0;
+                @media(max-width:767px) {
+                    padding: 0;
                 }
 
                 &.slick-center {
@@ -682,7 +699,7 @@
     }
 
     .shape-1,
-    .shape-2{
+    .shape-2 {
         display: none;
     }
 
@@ -942,59 +959,63 @@
             transition: all 0.3s;
             z-index: 1;
             border-color: $theme-primary-color;
-    
-            @media(max-width:767px){
-                display: none!important;
-             }
-    
+
+            @media(max-width:767px) {
+                display: none !important;
+            }
+
             &.slick-next {
                 position: absolute;
-                bottom:-120px;
+                bottom: -120px;
                 left: 52%;
 
-                &:before{
+                &:before {
                     content: "\f103";
                     font-family: "Flaticon";
                     color: $theme-primary-color;
                 }
-    
-                &:hover{
+
+                &:hover {
                     background: $theme-primary-color;
-                    
-                    &:before{
+
+                    &:before {
                         color: $white;
                     }
                 }
-    
-    
+
+
             }
+
             &.slick-prev {
                 position: absolute;
-                bottom:-120px;
+                bottom: -120px;
                 left: 48%;
-    
-                &:before{
+
+                &:before {
                     content: "\f104";
                     font-family: "Flaticon";
                     color: $theme-primary-color;
                 }
-    
-                @media(max-width:1700px){
+
+                @media(max-width:1700px) {
                     left: 46%;
                 }
-                @media(max-width:1200px){
+
+                @media(max-width:1200px) {
                     left: 44%;
                 }
-    
-                &:hover{
+
+                &:hover {
                     background: $theme-primary-color;
-                    &:before{
+
+                    &:before {
                         color: $white;
                     }
                 }
             }
-    
+
         }
+
         .owl-dots {
             bottom: -10px;
             position: absolute;
@@ -1132,7 +1153,7 @@
             }
         }
 
-        .testimonial-right-side{
+        .testimonial-right-side {
             position: relative;
 
             .video-holder {
@@ -1566,7 +1587,7 @@
         .office-info-item {
             text-align: center;
             padding: 60px 40px;
-            border: 1px solid $theme-primary-color;
+            border: 1px solid #ffb22c;
             border-radius: 15px;
             background: #18252f;
 
@@ -1585,7 +1606,7 @@
                     .fi {
                         &:before {
                             font-size: 55px;
-                            color: $theme-primary-color;
+                            color: #ffb22c;
                         }
                     }
                 }
@@ -1635,22 +1656,26 @@
 }
 
 /* 3.12 article-section */
-.article-section{
+.article-section {
     @media(min-width:1600px) {
         padding: 70px 280px;
-        
+
     }
+
     @media(max-width:1600px) {
         padding: 70px 160px;
-        
+
     }
+
     @media(max-width:1200px) {
         padding: 50px 50px;
-        
+
     }
+
     @media(max-width:991px) {
         padding: 40px 50px;
     }
+
     // @media(max-width:767px){
     //     padding: 0;
     //   }
@@ -1665,12 +1690,13 @@
             font-family: "PT Serif", serif;
             font-weight: 700;
             color: #141414E5;
+
             @include media-query(991px) {
                 font-size: 35px;
                 line-height: 55px;
                 margin-bottom: 50px;
             }
-    
+
             @include media-query(575px) {
                 font-size: 28px;
                 margin-bottom: 30px;
@@ -1680,32 +1706,42 @@
         .row-wrapper {
             width: 100%;
             padding: 0 100px;
+
             @include media-query(991px) {
                 padding: 0 30px;
 
             }
+
             @include media-query(575px) {
                 padding: 0 0;
             }
+
             .row1 {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
                 width: 100%;
                 flex-wrap: wrap;
+
                 .article-title {
                     flex-shrink: 0;
                     width: 60%;
-                    color:  rgba(20, 20, 20, 0.90);
+                    color: rgba(20, 20, 20, 0.90);
                     font-family: "Source Han Sans CN";
                     font-size: 36px;
                     font-style: normal;
                     font-weight: 500;
                     line-height: normal;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+
                     @include media-query(575px) {
+                        width: 100%;
                         font-size: 18px;
                     }
                 }
+
                 .date-wrapper {
                     color: rgba(20, 20, 20, 0.40);
                     font-family: "Source Han Sans CN";
@@ -1714,12 +1750,15 @@
                     font-weight: 400;
                     line-height: normal;
                     white-space: nowrap;
+
                     @include media-query(575px) {
                         font-size: 12px;
                     }
+
                     text {
                         &:first-child {
                             margin-right: 36px;
+
                             @include media-query(575px) {
                                 margin-right: 20px;
                             }
@@ -1727,6 +1766,7 @@
                     }
                 }
             }
+
             .row2 {
                 margin-top: 8px;
                 overflow: hidden;
@@ -1739,20 +1779,21 @@
                 font-style: normal;
                 font-weight: 400;
                 line-height: normal;
+
                 @include media-query(575px) {
                     font-size: 16px;
                 }
             }
         }
 
-        
+
 
     }
-    
 
-    
-    
-    
-    
+
+
+
+
+
 
 }

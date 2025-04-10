@@ -1,30 +1,30 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
-import HeaderTopbar2 from '../HeaderTopbar2/HeaderTopbar2'
-import MobileMenu from '../MobileMenu/MobileMenu'
-import Logo from '../../images/logo.png'
-import Logo1 from '../../images/logo1.png'
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import HeaderTopbar2 from "../HeaderTopbar2/HeaderTopbar2";
+import MobileMenu from "../MobileMenu/MobileMenu";
+import Logo from "../../images/logo.png";
+import Logo1 from "../../images/logo1.png";
 
 const Header3 = (props) => {
-  const [menuActive, setMenuState] = useState(false)
+  const [menuActive, setMenuState] = useState(false);
   const SubmitHandler = (e) => {
-    e.preventDefault()
-  }
+    e.preventDefault();
+  };
 
   const ClickHandler = () => {
-    window.scrollTo(10, 0)
-  }
+    window.scrollTo(10, 0);
+  };
 
   return (
     <header id="header" className={`wpo-header-style-7 ${props.topbarNone}`}>
       <HeaderTopbar2 />
       <div
         className={`wpo-site-header ${props.hclass}`}
-        style={{ background: '#ffb22c' }}
+        style={{ background: "#ffb22c" }}
       >
         <nav
           className="navigation navbar navbar-expand-lg navbar-light"
-          style={{ background: '#ffb22c' }}
+          style={{ background: "#ffb22c" }}
         >
           <div className="container-fluid">
             <div className="row align-items-center">
@@ -40,7 +40,7 @@ const Header3 = (props) => {
                     className="navbar-brand"
                     to="/home"
                   >
-                    <img src={Logo1} alt="" style={{ width: '120px' }} />
+                    <img src={Logo1} alt="" style={{ width: "120px" }} />
                   </Link>
                 </div>
               </div>
@@ -65,7 +65,7 @@ const Header3 = (props) => {
                     </li>
                     <li className="menu-item-has-children">
                       <a onClick={ClickHandler} to="/blog-fullwidth">
-                        金融论坛
+                        最新资讯
                       </a>
                     </li>
                     <li className="menu-item-has-children">
@@ -94,7 +94,7 @@ const Header3 = (props) => {
         </nav>
       </div>
     </header>
-  )
-}
+  );
+};
 
-export default Header3
+export default Header3;

@@ -1,19 +1,19 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
-import HeaderTopbar from '../HeaderTopbar/HeaderTopbar'
-import MobileMenu from '../MobileMenu/MobileMenu'
-import Logo from '../../images/logo.png'
-import Logo1 from '../../images/logo1.png'
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import HeaderTopbar from "../HeaderTopbar/HeaderTopbar";
+import MobileMenu from "../MobileMenu/MobileMenu";
+import Logo from "../../images/logo.png";
+import Logo1 from "../../images/logo1.png";
 
 const Header = (props) => {
-  const [menuActive, setMenuState] = useState(false)
+  const [menuActive, setMenuState] = useState(false);
   const SubmitHandler = (e) => {
-    e.preventDefault()
-  }
+    e.preventDefault();
+  };
 
   const ClickHandler = () => {
-    window.scrollTo(10, 0)
-  }
+    window.scrollTo(10, 0);
+  };
 
   return (
     <header id="header" className={props.topbarNone}>
@@ -34,7 +34,7 @@ const Header = (props) => {
                     className="navbar-brand"
                     to="/home"
                   >
-                    <img src={Logo1} alt="" style={{ width: '120px' }} />
+                    <img src={Logo1} alt="" style={{ width: "180px" }} />
                   </Link>
                 </div>
               </div>
@@ -53,19 +53,13 @@ const Header = (props) => {
                       </Link>
                     </li>
                     <li className="menu-item-has-children">
-                      <Link onClick={ClickHandler} to="/home#ServiceSection">
-                        大宗商品交易
-                      </Link>
+                      <Link to="/home#ServiceSection">大宗商品交易</Link>
                     </li>
                     <li className="menu-item-has-children">
-                      <Link onClick={ClickHandler} to="/blog-fullwidth">
-                        金融论坛
-                      </Link>
+                      <Link to="/home#ArticleSection">最新资讯</Link>
                     </li>
                     <li className="menu-item-has-children">
-                      <Link onClick={ClickHandler} to="/home#ContactInfo">
-                        联系我们
-                      </Link>
+                      <Link to="/home#ContactInfo">联系我们</Link>
                     </li>
                   </ul>
                 </div>
@@ -84,7 +78,7 @@ const Header = (props) => {
         </nav>
       </div>
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

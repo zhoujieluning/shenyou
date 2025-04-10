@@ -1,41 +1,41 @@
-import React from 'react'
-import { HashRouter, Routes, Route } from 'react-router-dom'
+import React from "react";
+import { HashRouter, Routes, Route } from "react-router-dom";
 
-import Homepage from '../HomePage/HomePage'
-import HomePage2 from '../HomePage2/HomePage2'
-import HomePage3 from '../HomePage3/HomePage3'
-import HomePage4 from '../HomePage4/HomePage4'
-import HomePage5 from '../HomePage5/HomePage5'
-import HomePage6 from '../HomePage6/HomePage6'
-import HomePage7 from '../HomePage7/HomePage7'
-import AboutPage from '../AboutPage/AboutPage'
-import TeamSinglePage from '../TeamSinglePage/TeamSinglePage'
-import ShopPage from '../ShopPage'
-import ProductSinglePage from '../ProductSinglePage'
-import CartPage from '../CartPage'
-import CheckoutPage from '../CheckoutPage'
-import OrderRecived from '../OrderRecived'
-import PricingPage from '../PricingPage/PricingPage'
-import BlogPage from '../BlogPage/BlogPage'
-import BlogPageLeft from '../BlogPageLeft/BlogPageLeft'
-import BlogPageFullwidth from '../BlogPageFullwidth/BlogPageFullwidth'
-import BlogDetails from '../BlogDetails/BlogDetails'
-import BlogDetailsFull from '../BlogDetailsFull/BlogDetailsFull'
-import BlogDetailsLeftSiide from '../BlogDetailsLeftSiide/BlogDetailsLeftSiide'
-import ServicePage from '../ServicePage/ServicePage'
-import ServicePageS2 from '../ServicePageS2/ServicePageS2'
-import ServicePageS3 from '../ServicePageS3/ServicePageS3'
-import ServiceSinglePage from '../ServiceSinglePage/ServiceSinglePage'
-import ProjectPage from '../ProjectPage/ProjectPage'
-import ProjectPageS2 from '../ProjectPageS2/ProjectPageS2'
-import ProjectPageS3 from '../ProjectPageS3/ProjectPageS3'
-import ProjectSinglePage from '../ProjectSinglePage/ProjectSinglePage'
-import TeamPage from '../TeamPage/TeamPage'
-import ContactPage from '../ContactPage/ContactPage'
-import ErrorPage from '../ErrorPage/ErrorPage'
-import LoginPage from '../LoginPage'
-import SignUpPage from '../SignUpPage'
-import ForgotPassword from '../ForgotPassword'
+import Homepage from "../HomePage/HomePage";
+import HomePage2 from "../HomePage2/HomePage2";
+import HomePage3 from "../HomePage3/HomePage3";
+import HomePage4 from "../HomePage4/HomePage4";
+import HomePage5 from "../HomePage5/HomePage5";
+import HomePage6 from "../HomePage6/HomePage6";
+import HomePage7 from "../HomePage7/HomePage7";
+import AboutPage from "../AboutPage/AboutPage";
+import TeamSinglePage from "../TeamSinglePage/TeamSinglePage";
+import ShopPage from "../ShopPage";
+import ProductSinglePage from "../ProductSinglePage";
+import CartPage from "../CartPage";
+import CheckoutPage from "../CheckoutPage";
+import OrderRecived from "../OrderRecived";
+import PricingPage from "../PricingPage/PricingPage";
+import BlogPage from "../BlogPage/BlogPage";
+import BlogPageLeft from "../BlogPageLeft/BlogPageLeft";
+import BlogPageFullwidth from "../BlogPageFullwidth/BlogPageFullwidth";
+import BlogDetails from "../BlogDetails/BlogDetails";
+import BlogDetailsFull from "../BlogDetailsFull/BlogDetailsFull";
+import BlogDetailsLeftSiide from "../BlogDetailsLeftSiide/BlogDetailsLeftSiide";
+import ServicePage from "../ServicePage/ServicePage";
+import ServicePageS2 from "../ServicePageS2/ServicePageS2";
+import ServicePageS3 from "../ServicePageS3/ServicePageS3";
+import ServiceSinglePage from "../ServiceSinglePage/ServiceSinglePage";
+import ProjectPage from "../ProjectPage/ProjectPage";
+import ProjectPageS2 from "../ProjectPageS2/ProjectPageS2";
+import ProjectPageS3 from "../ProjectPageS3/ProjectPageS3";
+import ProjectSinglePage from "../ProjectSinglePage/ProjectSinglePage";
+import TeamPage from "../TeamPage/TeamPage";
+import ContactPage from "../ContactPage/ContactPage";
+import ErrorPage from "../ErrorPage/ErrorPage";
+import LoginPage from "../LoginPage";
+import SignUpPage from "../SignUpPage";
+import ForgotPassword from "../ForgotPassword";
 
 const AllRoute = () => {
   return (
@@ -72,10 +72,7 @@ const AllRoute = () => {
             path="blog-single-left-sidebar/:id"
             element={<BlogDetailsLeftSiide />}
           />
-          <Route
-            path="blog-single-fullwidth/:id"
-            element={<BlogDetailsFull />}
-          />
+          <Route path="blog-single-fullwidth" element={<BlogDetailsFull />} />
           <Route path="blog" element={<BlogPage />} />
           <Route path="blog-left-sidebar" element={<BlogPageLeft />} />
           <Route path="blog-fullwidth" element={<BlogPageFullwidth />} />
@@ -87,7 +84,7 @@ const AllRoute = () => {
         </Routes>
       </HashRouter>
     </div>
-  )
-}
+  );
+};
 
-export default AllRoute
+export default AllRoute;

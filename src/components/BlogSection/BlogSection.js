@@ -1,23 +1,23 @@
-import React from 'react'
-import blogs from '../../api/blogs'
-import { Link } from 'react-router-dom'
-import bImg from '../../images/blog/shape.png'
-import bImg2 from '../../images/blog/shape2.png'
-import SectionTitle from '../SectionTitle/SectionTitle'
+import React from "react";
+import blogs from "../../api/blogs";
+import { Link } from "react-router-dom";
+import bImg from "../../images/blog/shape.png";
+import bImg2 from "../../images/blog/shape2.png";
+import SectionTitle from "../SectionTitle/SectionTitle";
 
 const ClickHandler = () => {
-  window.scrollTo(10, 0)
-}
+  window.scrollTo(10, 0);
+};
 
 const BlogSection = () => {
   return (
     <div
       id="BlogSection"
       className="wpo-blog-area-s2 section-padding section-bg"
-      style={{ paddingTop: '50px' }}
+      style={{ paddingTop: "50px" }}
     >
       <div className="container">
-        <SectionTitle subTitle={''} Title={'金融论坛'} />
+        <SectionTitle subTitle={""} Title={"最新资讯"} />
         <div className="wpo-blog-wrap">
           <div className="row align-items-center">
             {blogs.slice(0, 3).map((blog, bl) => (
@@ -66,10 +66,10 @@ const BlogSection = () => {
               width: 120,
               height: 40,
               fontSize: 16,
-              cursor: 'pointer',
-              background: '#ed3400',
-              transition: 'opacity 0.5s ease-out',
-              color: 'white',
+              cursor: "pointer",
+              background: "#ed3400",
+              transition: "opacity 0.5s ease-out",
+              color: "white",
             }}
             to="/blog-fullwidth"
           >
@@ -84,7 +84,7 @@ const BlogSection = () => {
         <img src={bImg2} alt="" />
       </div> */}
     </div>
-  )
-}
+  );
+};
 
-export default BlogSection
+export default BlogSection;

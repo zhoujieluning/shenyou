@@ -1,34 +1,42 @@
-import React, { useState, useEffect } from 'react'
-import { message } from 'antd'
-import shape from '../../images/ct-shape.png'
-import { submitPhone } from '../../api/tcb'
+import React, { useState, useEffect } from "react";
+import { message } from "antd";
+import shape from "../../images/ct-shape.png";
+import { submitPhone } from "../../api/tcb";
+
+message.config({
+  top: 100, // 距离顶部距离
+});
 
 const ContactInfo = (props) => {
-  const [phone, setPhone] = useState('')
+  const [phone, setPhone] = useState("");
   const submitHandler = async (e) => {
-    e.preventDefault()
+    e.preventDefault();
     try {
       if (!phone) {
-        message.warning('请填写您的手机号码')
-        return
+        message.warning("请填写您的手机号码");
+        return;
+      } else if (!/^1[3-9]\d{9}$/.test(phone)) {
+        message.warning("请填写合法的手机号码");
+        setPhone("");
+        return;
       }
-      await submitPhone(phone)
-      message.success('提交成功')
-      setPhone('')
+      await submitPhone(phone);
+      message.success("提交成功");
+      setPhone("");
     } catch (error) {
-      message.error('提交失败: ' + error.message)
+      message.error("提交失败: " + error.message);
     }
-  }
+  };
   return (
     <section id="ContactInfo" className="contact-info-section section-padding">
       <div className="container">
         <div className="office-info">
-          <h2 style={{ color: 'white', textAlign: 'center' }}>
+          <h2 style={{ color: "white", textAlign: "center" }}>
             留下您的联系方式
           </h2>
           <div
             className=" newsletter-widget"
-            style={{ display: 'flex', justifyContent: 'center' }}
+            style={{ display: "flex", justifyContent: "center" }}
           >
             <form onSubmit={submitHandler}>
               <div className="input-1">
@@ -38,7 +46,6 @@ const ContactInfo = (props) => {
                   placeholder="手机号"
                   onChange={(e) => setPhone(e.target.value)}
                   value={phone}
-                  required
                 />
               </div>
               <div className="submit clearfix">
@@ -48,7 +55,7 @@ const ContactInfo = (props) => {
               </div>
             </form>
           </div>
-          <h2 style={{ color: 'white', textAlign: 'center', marginTop: 40 }}>
+          <h2 style={{ color: "white", textAlign: "center", marginTop: 40 }}>
             或联系我们
           </h2>
           <div className="row" style={{ marginTop: 20 }}>
@@ -66,7 +73,7 @@ const ContactInfo = (props) => {
               </div>
             </div>
             <div className="col col-xl-4 col-lg-6 col-md-6 col-12">
-              <div className="office-info-item active">
+              <div className="office-info-item">
                 <div className="office-info-icon">
                   <div className="icon">
                     <i className="fi flaticon-phone-call"></i>
@@ -98,7 +105,7 @@ const ContactInfo = (props) => {
         <img src={shape} alt="shape" />
       </div> */}
     </section>
-  )
-}
+  );
+};
 
-export default ContactInfo
+export default ContactInfo;

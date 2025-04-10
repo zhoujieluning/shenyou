@@ -1,14 +1,14 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import Logo from '../../images/logo.png'
-import shape from '../../images/ft-shape.png'
+import React from "react";
+import { Link } from "react-router-dom";
+import Logo from "../../images/logo.png";
+import shape from "../../images/ft-shape.png";
 
 const ClickHandler = () => {
-  window.scrollTo(10, 0)
-}
+  window.scrollTo(10, 0);
+};
 const SubmitHandler = (e) => {
-  e.preventDefault()
-}
+  e.preventDefault();
+};
 
 const Footer = (props) => {
   return (
@@ -179,7 +179,9 @@ const Footer = (props) => {
           <div className="row align-items-center">
             <div className="col col-lg-6 col-md-12 col-12">
               <ul>
-                <li>版权归 © 申优 所有，未经许可不得转载或商用</li>
+                <li style={{ color: "#999" }}>
+                  版权归 © 申优 所有，未经许可不得转载或商用
+                </li>
               </ul>
             </div>
             {/* <div className="col col-lg-6 col-md-12 col-12">
@@ -212,7 +214,7 @@ const Footer = (props) => {
         </div>
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
