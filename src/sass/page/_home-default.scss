@@ -1,33 +1,51 @@
 /* 3.2 wpo-about-sections */
 
 .wpo-about-section {
-    @media(min-width:1600px) {
-        padding: 70px 320px;
+    padding: 70px 0;
+    // @media(min-width:1600px) {
+    //     padding: 70px 320px;
 
-    }
+    // }
 
-    @media(max-width:1600px) {
-        padding: 70px 160px;
+    // @media(max-width:1600px) {
+    //     padding: 70px 160px;
 
-    }
+    // }
 
     @media(max-width:1200px) {
-        padding: 50px 50px;
+        padding: 50px 0;
 
     }
 
-    @media(max-width:991px) {
-        padding: 40px 50px;
-    }
 
     // @media(max-width:767px){
     //     padding: 0;
     //   }
     @media(max-width:575px) {
-        padding: 30px 20px;
+        padding: 30px 0;
     }
 
     .about-container {
+        margin: 0 auto;
+        max-width: 1220px;
+        @media(max-width:1250px) {
+            max-width: 1050px;
+        }
+        @media(max-width:1050px) {
+            max-width: 850px;
+        }
+        @media(max-width:950px) {
+            max-width: 670px;
+        }
+        @media(max-width:700px) {
+            max-width: 560px;
+        }
+        @media(max-width:550px) {
+            max-width: 460px;
+        }
+        @media(max-width:450px) {
+            width: 380px;
+        }
         .about-title {
             margin-bottom: 70px;
             font-size: 55px;
@@ -48,11 +66,6 @@
         }
 
         .card-wrapper {
-
-            @media(max-width:575px) {
-                // justify-content: center !important;
-            }
-
             .about-card {
                 display: flex;
                 justify-content: center;
@@ -65,15 +78,25 @@
                 // height: 300px;
                 overflow: hidden;
 
-                @media(max-width:1200px) {
-                    width: 350px;
-                }
-
-                @media(max-width:991px) {
+                @media(max-width:1250px) {
                     width: 320px;
                 }
 
-                @media(max-width:575px) {
+                @media(max-width:1050px) {
+                    width: 260px;
+                }
+
+                @media(max-width:950px) {
+                    width: 200px;
+                }
+
+                @media(max-width:700px) {
+                    width: 250px;
+                }
+                @media(max-width:550px) {
+                    width: 200px;
+                }
+                @media(max-width:450px) {
                     width: 170px;
                 }
 
@@ -1657,23 +1680,11 @@
 
 /* 3.12 article-section */
 .article-section {
-    @media(min-width:1600px) {
-        padding: 70px 280px;
-
-    }
-
-    @media(max-width:1600px) {
-        padding: 70px 160px;
-
-    }
-
-    @media(max-width:1200px) {
-        padding: 50px 50px;
-
-    }
+    padding: 70px 0;
+    
 
     @media(max-width:991px) {
-        padding: 40px 50px;
+        padding: 40px 0;
     }
 
     // @media(max-width:767px){
@@ -1684,6 +1695,8 @@
     }
 
     .article-container {
+        margin: 0 auto;
+        max-width: 1200px;
         .article-head {
             margin-bottom: 70px;
             font-size: 55px;
@@ -1728,7 +1741,7 @@
                     width: 60%;
                     color: rgba(20, 20, 20, 0.90);
                     font-family: "Source Han Sans CN";
-                    font-size: 36px;
+                    font-size: 30px;
                     font-style: normal;
                     font-weight: 500;
                     line-height: normal;
@@ -1736,7 +1749,10 @@
                     text-overflow: ellipsis;
                     white-space: nowrap;
 
-                    @include media-query(575px) {
+                    @include media-query(900px) {
+                        width: 100%;
+                    }
+                    @include media-query(500px) {
                         width: 100%;
                         font-size: 18px;
                     }
@@ -1745,7 +1761,7 @@
                 .date-wrapper {
                     color: rgba(20, 20, 20, 0.40);
                     font-family: "Source Han Sans CN";
-                    font-size: 24px;
+                    font-size: 20px;
                     font-style: normal;
                     font-weight: 400;
                     line-height: normal;
@@ -1775,7 +1791,7 @@
                 white-space: nowrap;
 
                 font-family: "Source Han Sans CN";
-                font-size: 24px;
+                font-size: 20px;
                 font-style: normal;
                 font-weight: 400;
                 line-height: normal;
