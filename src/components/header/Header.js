@@ -34,7 +34,7 @@ const Header = (props) => {
                     className="navbar-brand"
                     to="/home"
                   >
-                    <img src={Logo1} alt="" style={{ width: "180px" }} />
+                    <img src={Logo1} alt="" />
                   </Link>
                 </div>
               </div>

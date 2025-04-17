@@ -1,16 +1,16 @@
-import React from 'react'
-import Slider from 'react-slick'
-import 'slick-carousel/slick/slick.css'
-import 'slick-carousel/slick/slick-theme.css'
-import { Link } from 'react-router-dom'
-import SectionTitle2 from '../SectionTitle2/SectionTitle2'
-import Services from '../../api/service'
+import React from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import { Link } from "react-router-dom";
+import SectionTitle2 from "../SectionTitle2/SectionTitle2";
+import Services from "../../api/service";
 
-import simg from '../../../src/images/service/1.png'
-import simg2 from '../../../src/images/service/2.png'
-import simg3 from '../../../src/images/service/3.png'
-import simg4 from '../../../src/images/service/4.png'
-import simg5 from '../../../src/images/service/5.png'
+import simg from "../../../src/images/service/1.png";
+import simg2 from "../../../src/images/service/2.png";
+import simg3 from "../../../src/images/service/3.png";
+import simg4 from "../../../src/images/service/4.png";
+import simg5 from "../../../src/images/service/5.png";
 
 const settings = {
   dots: true,
@@ -63,30 +63,30 @@ const settings = {
       },
     },
   ],
-}
+};
 
 const ClickHandler = () => {
-  window.scrollTo(10, 0)
-}
+  window.scrollTo(10, 0);
+};
 
 const ServiceSection = () => {
   return (
     <section
       id="ServiceSection"
       className="wpo-service-section section-padding"
-      style={{ paddingTop: '50px' }}
+      style={{ paddingTop: "50px" }}
     >
       <div className="container">
         <SectionTitle2
           //   subTitle={"Our Services"}
-          Title={'大宗商品交易'}
+          Title={"大宗商品交易"}
         />
         <div
           className="row-grid"
           style={{
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
             gap: 30,
           }}
         >
@@ -139,7 +139,7 @@ const ServiceSection = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default ServiceSection
+export default ServiceSection;

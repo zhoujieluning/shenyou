@@ -60,14 +60,19 @@ const ContactInfo = (props) => {
           </h2>
           <div className="row" style={{ marginTop: 20 }}>
             <div className="col col-xl-4 col-lg-6 col-md-6 col-12">
-              <div className="office-info-item">
+              <div
+                className="office-info-item"
+                style={{ paddingLeft: 0, paddingRight: 0 }}
+              >
                 <div className="office-info-icon">
                   <div className="icon">
                     <i className="fi flaticon-place"></i>
                   </div>
                 </div>
                 <div className="office-info-text">
-                  <p>深圳市福田区XXXXXX</p>
+                  <p style={{ fontSize: "18px" }}>
+                    深圳市福田区皇岗路深业上城T1座46楼
+                  </p>
                   {/* <span>公司地址</span> */}
                 </div>
               </div>
@@ -80,7 +85,7 @@ const ContactInfo = (props) => {
                   </div>
                 </div>
                 <div className="office-info-text">
-                  <p>185 1111 1111</p>
+                  <p style={{ fontSize: "18px" }}>138 2652 0202</p>
                   {/* <span>电话</span> */}
                 </div>
               </div>
@@ -93,7 +98,7 @@ const ContactInfo = (props) => {
                   </div>
                 </div>
                 <div className="office-info-text">
-                  <p>xxxxxxxxxxxxxx@gmail.com</p>
+                  <p style={{ fontSize: "18px" }}>14804181@qq.com</p>
                   {/* <span>邮箱</span> */}
                 </div>
               </div>

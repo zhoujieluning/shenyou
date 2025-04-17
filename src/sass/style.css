@@ -3328,6 +3328,8 @@ img {
   -webkit-animation-delay: 0s;
   animation-delay: 0s;
 }
+
+
 .hero .hero-slider .slick-current .slide-caption > div * {
   -webkit-animation-name: fadeInLeft;
   animation-name: fadeInLeft;
