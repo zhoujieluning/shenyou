@@ -9,7 +9,6 @@ import gl2 from "../../images/blog/img-2.jpg";
 import blogs from "../../api/blogs";
 import { useParams, useLocation } from "react-router-dom";
 import BlogSidebar from "../BlogSidebar/BlogSidebar.js";
-import { postComment, getComments } from "../../api/tcb";
 import { message } from "antd";
 
 const BlogSingle = (props) => {

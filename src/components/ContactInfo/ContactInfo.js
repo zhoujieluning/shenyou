@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { message } from "antd";
 import shape from "../../images/ct-shape.png";
-import { submitPhone } from "../../api/tcb";
+import { submitPhone } from "../../api/article";
 
 message.config({
   top: 100, // 距离顶部距离
